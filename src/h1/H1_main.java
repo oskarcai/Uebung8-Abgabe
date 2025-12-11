@@ -6,10 +6,10 @@ public class H1_main {
     public static void main(String[] args) {
 
         // Aufgabenteil a) -> ggT zweier Zahlen finden:
-        System.out.println( Bruch.ggT(96,27) );
+        /*System.out.println( Bruch.ggT(96,27) );
         System.out.println( Bruch.ggT(27,96) );
         System.out.println( Bruch.ggT(-27,96) );
-        System.out.println( Bruch.ggT(27,-96) );
+        System.out.println( Bruch.ggT(27,-96) );*/
 
         System.out.println();
 

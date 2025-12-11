@@ -14,15 +14,13 @@ public class Bruch {
     }
 
     // Methoden (Fähigkeiten):
-    public static int ggT(int x, int y) {   // private & not-static
+    private int ggT(int x, int y) {
         // Kritische Fälle: x == 0 || y == 0
         if(x == 0 && y == 0) {
             return 0;
-        }
-        if(x == 0) {
+        } else if(x == 0) {
             return Math.abs(y);
-        }
-        if(y == 0) {
+        } else if(y == 0) {
             return Math.abs(x);
         }
         // Euklidischer Algorithmus:
@@ -51,7 +49,6 @@ public class Bruch {
         int ggT = ggT(zaehler, nenner);
         zaehler = zaehler / ggT;
         nenner = nenner / ggT;
-        System.out.println(zaehler + ":" + nenner); // entf
     }
 
     public boolean hasSameValueAs(Bruch b) {
