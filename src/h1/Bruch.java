@@ -27,10 +27,8 @@ public class Bruch {
         // 96:27 = 3 Rest15
         // Dividend = 96; Divisor = 27; Rest = 15;
         int rest;
-        int betrag_x = x >= 0 ? x : -x;
-        int betrag_y = y >= 0 ? y : -y;
-        int dividend = betrag_x > betrag_y ? betrag_x : betrag_y;
-        int divisor = betrag_x > betrag_y ? betrag_y : betrag_x;
+        int dividend = Math.max( Math.abs(x), Math.abs(y) );    // betragsmäßig größere Zahl von x und y
+        int divisor = Math.min( Math.abs(x), Math.abs(y) );     // betragsmäßig kleinere Zahl von x und y
 
         while (true) {
             rest = dividend % divisor;
@@ -56,7 +54,7 @@ public class Bruch {
     }
 
     public boolean hasSameValueAs(Bruch b) {
-        return this.zaehler * b.nenner == this.nenner * b.zaehler;
+        return (long)this.zaehler * b.nenner == (long)this.nenner * b.zaehler;  // zu long casten -> potenziellen overflow vermeiden
     }
 
 }
