@@ -47,6 +47,10 @@ public class Bruch {
 
     public void shorten() {
         int ggT = ggT(zaehler, nenner);
+
+        if(ggT == 0) {
+            return;
+        }
         zaehler = zaehler / ggT;
         nenner = nenner / ggT;
     }
