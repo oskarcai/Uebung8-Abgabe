@@ -14,7 +14,7 @@ public class H2_main {
         myList.append(12);
         myList.append(45);
         myList.append(60);
-        System.out.println( myList );
+        System.out.println( myList );   // funktioniert nur, wenn ich die toString()-Methode überschreibe
 
         // Node-Objekt (Knoten) nach Knoten mit bestimmtem Wert in der Liste anfügen:
         myList.insertAfter(45,4);

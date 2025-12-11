@@ -83,18 +83,4 @@ public class SimpleList {
         return false;
     }
 
-    // entf
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        Node current = head.next; // erstes echtes Element (head ist nur Dummy)
-        while (current != null) {
-            sb.append(current.value);
-            if (current.next != null) {
-                sb.append(" -> ");
-            }
-            current = current.next;
-        }
-        return sb.toString();
-    }
-
 }
